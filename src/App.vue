@@ -53,18 +53,15 @@
       </div>
     </transition>
     <main>
-      <PlanetsView />
+      <router-view />
     </main>
   </div>
 </template>
 
 <script>
-import PlanetsView from "./components/PlanetsView.vue";
 export default {
   name: "App",
-  components: {
-    PlanetsView,
-  },
+
   data() {
     return {
       showMobileMenu: false,

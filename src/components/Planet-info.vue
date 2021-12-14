@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: "planets-view",
+  name: "planet-info",
 };
 </script>
 
