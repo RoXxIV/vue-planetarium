@@ -22,8 +22,30 @@
           </p>
         </div>
         <span>
-          <p>Source</p>
-          <a :href="source">Wikipedia</a>
+          <p>
+            Source
+            <a
+              v-if="showOverview"
+              :href="overviewSource"
+              target="_blank"
+              rel="noopener noreferrer"
+              >wikipedia</a
+            >
+            <a
+              v-if="showStructure"
+              :href="structureSource"
+              target="_blank"
+              rel="noopener noreferrer"
+              >wikipedia</a
+            >
+            <a
+              v-if="showGeology"
+              :href="geologySource"
+              target="_blank"
+              rel="noopener noreferrer"
+              >wikipedia</a
+            >
+          </p>
         </span>
         <ul>
           <li
@@ -52,19 +74,19 @@
     </section>
     <section class="data-planet">
       <div>
-        <h3>ROTATION TIME</h3>
+        <h4>ROTATION TIME</h4>
         <span>{{ rotation }}</span>
       </div>
       <div>
-        <h3>REVOLUTION TIME</h3>
+        <h4>REVOLUTION TIME</h4>
         <span>{{ revolution }}</span>
       </div>
       <div>
-        <h3>RADIUS</h3>
+        <h4>RADIUS</h4>
         <span>{{ radius }}</span>
       </div>
       <div>
-        <h3>AVERAGE TEMP</h3>
+        <h4>AVERAGE TEMP</h4>
         <span>{{ temperature }}</span>
       </div>
     </section>
@@ -79,8 +101,11 @@ export default {
     "planetImg",
     "source",
     "overview",
+    "overviewSource",
     "structure",
+    "structureSource",
     "geology",
+    "geologySource",
     "rotation",
     "revolution",
     "radius",
@@ -146,6 +171,31 @@ export default {
       line-height: 25px;
       font-size: 14px;
       font-family: "Spartan", sans-serif;
+    }
+  }
+}
+.data-planet {
+  display: flex;
+  justify-content: space-around;
+  padding: 0px 165px;
+  div {
+    border: 1px solid var(--gray);
+    width: 20%;
+    padding: 21px 23px;
+    h4 {
+      color: var(--white);
+      line-height: 25px;
+      letter-spacing: 1px;
+      font-size: 11px;
+      font-family: "Spartan", sans-serif;
+      font-weight: bold;
+      margin: 0;
+    }
+    span {
+      font-family: "Antonio", sans-serif;
+      color: var(--white);
+      letter-spacing: -1.5px;
+      font-size: 40px;
     }
   }
 }
