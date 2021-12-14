@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import PlanetInfo from "../components/Planet-info.vue";
+import PlanetInfo from "../components/PlanetInfo.vue";
 export default {
   components: { PlanetInfo },
   data() {
