@@ -3,14 +3,14 @@
     <header>
       <span id="logo">THE PLANETS</span>
       <nav>
-        <li>MERCURY</li>
-        <li>VENUS</li>
-        <li>EARTH</li>
-        <li>MARS</li>
-        <li>JUPITER</li>
-        <li>SATURN</li>
-        <li>URANUS</li>
-        <li>NEPTUNE</li>
+        <li><router-link to="/mercury">MERCURY</router-link></li>
+        <li><router-link to="/venus">VENUS</router-link></li>
+        <li><router-link to="/">EARTH</router-link></li>
+        <li><router-link to="/mars">MARS</router-link></li>
+        <li><router-link to="/jupiter">JUPITER</router-link></li>
+        <li><router-link to="/saturn">SATURN</router-link></li>
+        <li><router-link to="/uranus">URANUS</router-link></li>
+        <li><router-link to="/neptune">NEPTUNE</router-link></li>
       </nav>
       <div id="menu-burger">
         <!-----Toggle Menu Burger Mobile----->
@@ -77,7 +77,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 header {
   display: flex;
   justify-content: space-between;
