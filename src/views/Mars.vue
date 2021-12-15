@@ -1,6 +1,6 @@
 <template>
   <PlanetInfo
-    :name="mars.name.toUpperCase()"
+    :name="mars.name"
     :planetImg="planetImg"
     :overview="mars.overview.content"
     :overviewSource="mars.overview.source"
@@ -12,6 +12,7 @@
     :revolution="mars.revolution"
     :radius="mars.radius"
     :temperature="mars.temperature"
+    assignedColor="D14C32"
   ></PlanetInfo>
 </template>
 

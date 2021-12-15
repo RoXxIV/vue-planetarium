@@ -1,6 +1,6 @@
 <template>
   <PlanetInfo
-    :name="uranus.name.toUpperCase()"
+    :name="uranus.name"
     :planetImg="planetImg"
     :overview="uranus.overview.content"
     :overviewSource="uranus.overview.source"
@@ -12,6 +12,7 @@
     :revolution="uranus.revolution"
     :radius="uranus.radius"
     :temperature="uranus.temperature"
+    assignedColor="1EC1A2"
   ></PlanetInfo>
 </template>
 

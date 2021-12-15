@@ -1,6 +1,6 @@
 <template>
   <PlanetInfo
-    :name="jupiter.name.toUpperCase()"
+    :name="jupiter.name"
     :planetImg="planetImg"
     :overview="jupiter.overview.content"
     :overviewSource="jupiter.overview.source"
@@ -12,6 +12,7 @@
     :revolution="jupiter.revolution"
     :radius="jupiter.radius"
     :temperature="jupiter.temperature"
+    assignedColor="D83A34"
   ></PlanetInfo>
 </template>
 

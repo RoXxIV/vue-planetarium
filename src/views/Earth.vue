@@ -1,6 +1,6 @@
 <template>
   <PlanetInfo
-    :name="earth.name.toUpperCase()"
+    :name="earth.name"
     :planetImg="planetImg"
     :overview="earth.overview.content"
     :overviewSource="earth.overview.source"
@@ -12,6 +12,7 @@
     :revolution="earth.revolution"
     :radius="earth.radius"
     :temperature="earth.temperature"
+    assignedColor="6D2ED5"
   ></PlanetInfo>
 </template>
 

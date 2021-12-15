@@ -1,6 +1,6 @@
 <template>
   <PlanetInfo
-    :name="neptune.name.toUpperCase()"
+    :name="neptune.name"
     :planetImg="planetImg"
     :overview="neptune.overview.content"
     :overviewSource="neptune.overview.source"
@@ -12,6 +12,7 @@
     :revolution="neptune.revolution"
     :radius="neptune.radius"
     :temperature="neptune.temperature"
+    assignedColor="2D68F0"
   ></PlanetInfo>
 </template>
 

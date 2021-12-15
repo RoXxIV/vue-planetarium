@@ -41,19 +41,45 @@
     <transition name="fade">
       <div v-if="showMobileMenu" id="mobileNav">
         <ul>
-          <li><span class="circle"></span>Mercury</li>
-          <li><span class="circle"></span>VENUS</li>
-          <li><span class="circle"></span>EARTH</li>
-          <li><span class="circle"></span>MARS</li>
-          <li><span class="circle"></span>JUPITER</li>
-          <li><span class="circle"></span>SATURN</li>
-          <li><span class="circle"></span>URANUS</li>
-          <li><span class="circle"></span>NEPTUNE</li>
+          <li>
+            <span class="circle"></span
+            ><router-link to="mercury" class="mobile-link">Mercury</router-link>
+          </li>
+          <li>
+            <span class="circle"></span
+            ><router-link to="venus" class="mobile-link">VENUS</router-link>
+          </li>
+          <li>
+            <span class="circle"></span
+            ><router-link to="earth" class="mobile-link">EARTH</router-link>
+          </li>
+          <li>
+            <span class="circle"></span
+            ><router-link to="mars" class="mobile-link">MARS</router-link>
+          </li>
+          <li>
+            <span class="circle"></span
+            ><router-link to="jupiter" class="mobile-link">JUPITER</router-link>
+          </li>
+          <li>
+            <span class="circle"></span
+            ><router-link to="saturn" class="mobile-link">SATURN</router-link>
+          </li>
+          <li>
+            <span class="circle"></span
+            ><router-link to="uranus" class="mobile-link">URANUS</router-link>
+          </li>
+          <li>
+            <span class="circle"></span
+            ><router-link to="neptune" class="mobile-link">NEPTUNE</router-link>
+          </li>
         </ul>
       </div>
     </transition>
     <main>
-      <router-view />
+      <transition name="fade">
+        <router-view />
+      </transition>
     </main>
   </div>
 </template>
@@ -144,7 +170,7 @@ header {
   position: absolute;
   width: 100%;
   font-size: 1.3em;
-  z-index: 1;
+  z-index: 4;
   ul {
     margin: 0;
     padding-top: 20px;
@@ -152,15 +178,17 @@ header {
     li {
       display: flex;
       align-items: center;
+      margin: 0px 24px;
+      padding: 20px 0px;
+      border-bottom: 1px solid #979797;
+    }
+    .mobile-link {
       color: var(--white);
       line-height: 25px;
       font-size: 15px;
       font-family: "Spartan", sans-serif;
       letter-spacing: 1.36px;
       font-weight: bold;
-      margin: 0px 24px;
-      padding: 20px 0px;
-      border-bottom: 1px solid #979797;
     }
   }
 }
@@ -236,5 +264,14 @@ $colors: (
   stroke-dasharray: 90 207;
   stroke-dashoffset: -134;
   stroke-width: 6;
+}
+/**router-view transition */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 1.5s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

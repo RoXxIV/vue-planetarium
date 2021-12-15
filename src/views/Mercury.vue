@@ -1,6 +1,6 @@
 <template>
   <PlanetInfo
-    :name="mercury.name.toUpperCase()"
+    :name="mercury.name"
     :planetImg="planetImg"
     :overview="mercury.overview.content"
     :overviewSource="mercury.overview.source"
@@ -12,6 +12,7 @@
     :revolution="mercury.revolution"
     :radius="mercury.radius"
     :temperature="mercury.temperature"
+    assignedColor="419EBB"
   ></PlanetInfo>
 </template>
 

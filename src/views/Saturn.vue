@@ -1,6 +1,6 @@
 <template>
   <PlanetInfo
-    :name="saturn.name.toUpperCase()"
+    :name="saturn.name"
     :planetImg="planetImg"
     :overview="saturn.overview.content"
     :overviewSource="saturn.overview.source"
@@ -12,6 +12,7 @@
     :revolution="saturn.revolution"
     :radius="saturn.radius"
     :temperature="saturn.temperature"
+    assignedColor="CD5120"
   ></PlanetInfo>
 </template>
 
