@@ -205,6 +205,7 @@ export default {
   line-height: 25px;
   font-size: 14px;
   font-family: "Spartan", sans-serif;
+  height: 150px;
 }
 .source p {
   font-family: "Spartan", sans-serif;

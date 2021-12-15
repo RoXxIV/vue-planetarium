@@ -41,35 +41,75 @@
     <transition name="fade">
       <div v-if="showMobileMenu" id="mobileNav">
         <ul>
-          <li>
+          <li
+            @click="
+              showMobileMenu = false;
+              ToggleBurgerMenu();
+            "
+          >
             <span class="circle"></span
             ><router-link to="mercury" class="mobile-link">Mercury</router-link>
           </li>
-          <li>
+          <li
+            @click="
+              showMobileMenu = false;
+              ToggleBurgerMenu();
+            "
+          >
             <span class="circle"></span
             ><router-link to="venus" class="mobile-link">VENUS</router-link>
           </li>
-          <li>
+          <li
+            @click="
+              showMobileMenu = false;
+              ToggleBurgerMenu();
+            "
+          >
             <span class="circle"></span
-            ><router-link to="earth" class="mobile-link">EARTH</router-link>
+            ><router-link to="/" class="mobile-link">EARTH</router-link>
           </li>
-          <li>
+          <li
+            @click="
+              showMobileMenu = false;
+              ToggleBurgerMenu();
+            "
+          >
             <span class="circle"></span
             ><router-link to="mars" class="mobile-link">MARS</router-link>
           </li>
-          <li>
+          <li
+            @click="
+              showMobileMenu = false;
+              ToggleBurgerMenu();
+            "
+          >
             <span class="circle"></span
             ><router-link to="jupiter" class="mobile-link">JUPITER</router-link>
           </li>
-          <li>
+          <li
+            @click="
+              showMobileMenu = false;
+              ToggleBurgerMenu();
+            "
+          >
             <span class="circle"></span
             ><router-link to="saturn" class="mobile-link">SATURN</router-link>
           </li>
-          <li>
+          <li
+            @click="
+              showMobileMenu = false;
+              ToggleBurgerMenu();
+            "
+          >
             <span class="circle"></span
             ><router-link to="uranus" class="mobile-link">URANUS</router-link>
           </li>
-          <li>
+          <li
+            @click="
+              showMobileMenu = false;
+              ToggleBurgerMenu();
+            "
+          >
             <span class="circle"></span
             ><router-link to="neptune" class="mobile-link">NEPTUNE</router-link>
           </li>
@@ -77,9 +117,11 @@
       </div>
     </transition>
     <main>
-      <transition name="fade">
-        <router-view />
-      </transition>
+      <router-view v-slot="{ Component }">
+        <transition name="scale" mode="out-in">
+          <component :is="Component" />
+        </transition>
+      </router-view>
     </main>
   </div>
 </template>
@@ -266,12 +308,14 @@ $colors: (
   stroke-width: 6;
 }
 /**router-view transition */
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 1.5s;
+.scale-enter-active,
+.scale-leave-active {
+  transition: all 0.5s ease;
 }
-.fade-enter,
-.fade-leave-to {
+
+.scale-enter-from,
+.scale-leave-to {
   opacity: 0;
+  transform: scale(0.9);
 }
 </style>
