@@ -7,9 +7,7 @@
           v-if="showOverview || showGeology"
           alt=""
         />
-
         <img :src="getInternalImg(planetImg)" v-if="showStructure" />
-
         <img
           class="geology-img"
           :src="getGeology(planetImg)"
