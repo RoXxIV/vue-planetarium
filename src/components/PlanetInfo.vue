@@ -199,6 +199,8 @@ export default {
   font-family: "Antonio", sans-serif;
   color: var(--white);
   font-size: 80px;
+  line-height: 25px;
+  letter-spacing: 2.6px;
 }
 .resume p {
   color: var(--white);
