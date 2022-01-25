@@ -1,5 +1,12 @@
 # vue-planetarium
 
+Dans le cadre de mon apprentissage sur la plateforme Frontendmentor j'ai integré
+une maquette figma donnée.  
+## VueJS 3 
+Démonstration du projet en cours, déployé avec **Heroku** [Link](https://planetarium-project.herokuapp.com)
+
+
+
 ## Project setup
 ```
 npm install
@@ -10,15 +17,3 @@ npm install
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
