@@ -2,21 +2,19 @@
   <div>
     <section class="planet-review">
       <div class="planet-img">
-        <!-- Utilisez le chemin de l'image depuis imagePaths.planet -->
         <img
           :src="imagePaths.planet"
           v-if="showOverview || showGeology"
           alt="Planet Image"
+          id="one"
         />
 
-        <!-- Utilisez le chemin de l'image depuis imagePaths.internal -->
         <img
           :src="imagePaths.internal"
           v-if="showStructure"
           alt="Planet Internal Structure"
         />
 
-        <!-- Utilisez le chemin de l'image depuis imagePaths.geology -->
         <img
           class="geology-img"
           :src="imagePaths.geology"
@@ -119,6 +117,7 @@
 </template>
 
 <script>
+import gsap from "gsap";
 export default {
   name: "planet-info",
   props: [
@@ -148,7 +147,6 @@ export default {
         internal: "",
         geology: "",
       },
-      // autres données ...
     };
   },
 
@@ -188,6 +186,20 @@ export default {
       this.showStructure = false;
       this.showGeology = true;
     },
+    animeImg() {
+      gsap.fromTo(
+        "#one",
+        {},
+        {
+          scale: 1.1,
+          duration: 1.5,
+          ease: "power4.out",
+        }
+      );
+    },
+  },
+  mounted() {
+    this.animeImg();
   },
 };
 </script>
@@ -214,7 +226,6 @@ export default {
     }
   }
 }
-
 .planet-resume {
   width: 350px;
   h2 {

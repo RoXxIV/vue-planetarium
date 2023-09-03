@@ -8,26 +8,52 @@
     :structureSource="jupiter.structure.source"
     :geology="jupiter.geology.content"
     :geologySource="jupiter.geology.source"
-    :rotation="jupiter.rotation"
-    :revolution="jupiter.revolution"
-    :radius="jupiter.radius"
-    :temperature="jupiter.temperature"
-    assignedColor="D83A34"
+    :rotation="tweenedRotation"
+    :revolution="tweenedRevolution"
+    :radius="tweenedRadius"
+    :temperature="tweenedTemperature"
+    assignedColor="6D2ED5"
   ></PlanetInfo>
 </template>
 
 <script>
+import gsap from "gsap";
 import PlanetInfo from "../components/PlanetInfo.vue";
 import data from "../data.json";
+
 export default {
   components: { PlanetInfo },
   data() {
     return {
-      jupiter: data[4],
+      jupiter: data[2],
       planetImg: "planet-jupiter",
+      tweenedRotation: 0,
+      tweenedRevolution: 0,
+      tweenedRadius: 0,
+      tweenedTemperature: 0,
     };
+  },
+  mounted() {
+    gsap.to(this, {
+      duration: 1,
+      tweenedRotation: this.jupiter.rotation,
+      ease: "power4.out",
+    });
+    gsap.to(this, {
+      duration: 1.5,
+      tweenedRevolution: this.jupiter.revolution,
+      ease: "power4.out",
+    });
+    gsap.to(this, {
+      duration: 2,
+      tweenedRadius: this.jupiter.radius,
+      ease: "power4.out",
+    });
+    gsap.to(this, {
+      duration: 2.5,
+      tweenedTemperature: this.jupiter.temperature,
+      ease: "power4.out",
+    });
   },
 };
 </script>
-
-<style></style>

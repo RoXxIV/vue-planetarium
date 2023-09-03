@@ -1,7 +1,7 @@
 <template>
   <div>
     <header>
-      <span id="logo">THE PLANETS</span>
+      <router-link to="/"><span id="logo">THE PLANETS</span></router-link>
       <nav>
         <li><router-link to="/mercury">MERCURY</router-link></li>
         <li><router-link to="/venus">VENUS</router-link></li>
@@ -128,6 +128,8 @@
 
 <script>
 import { RouterLink, RouterView } from "vue-router";
+import gsap from "gsap";
+
 export default {
   name: "App",
 
