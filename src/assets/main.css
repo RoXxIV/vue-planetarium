@@ -1,0 +1,46 @@
+/*****GOOGLE FONT*****
+* - Antonio Medium 
+* - Spartan Bold
+* - SPartan Regular
+*/
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=Spartan:wght@400;700&display=swap");
+/*****Variables*****/
+:root {
+  --white: #ffffff;
+  --dark-blue: #070724;
+  --gray: #38384f;
+}
+/*****Global Style*****/
+* {
+  outline: none;
+  text-decoration: none;
+  transition: all 0.2s ease 0s;
+}
+* {
+  box-sizing: inherit;
+}
+*:hover {
+  transition: all 0.2s ease 0s;
+}
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: var(--dark-blue);
+  /*background-image: url(../assets/images/background-stars.svg);*/
+}
+a,
+a:hover,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+ul,
+nav {
+  list-style: none;
+  padding-left: 0;
+}
