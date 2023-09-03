@@ -25,7 +25,7 @@ export default {
   components: { PlanetInfo },
   data() {
     return {
-      mars: data[2],
+      mars: data[3],
       planetImg: "planet-mars",
       tweenedRotation: 0,
       tweenedRevolution: 0,

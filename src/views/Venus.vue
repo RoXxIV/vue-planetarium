@@ -25,7 +25,7 @@ export default {
   components: { PlanetInfo },
   data() {
     return {
-      venus: data[2],
+      venus: data[1],
       planetImg: "planet-venus",
       tweenedRotation: 0,
       tweenedRevolution: 0,

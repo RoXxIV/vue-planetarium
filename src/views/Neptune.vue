@@ -25,7 +25,7 @@ export default {
   components: { PlanetInfo },
   data() {
     return {
-      neptune: data[2],
+      neptune: data[7],
       planetImg: "planet-neptune",
       tweenedRotation: 0,
       tweenedRevolution: 0,

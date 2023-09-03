@@ -25,7 +25,7 @@ export default {
   components: { PlanetInfo },
   data() {
     return {
-      jupiter: data[2],
+      jupiter: data[4],
       planetImg: "planet-jupiter",
       tweenedRotation: 0,
       tweenedRevolution: 0,

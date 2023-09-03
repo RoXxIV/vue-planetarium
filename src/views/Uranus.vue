@@ -25,7 +25,7 @@ export default {
   components: { PlanetInfo },
   data() {
     return {
-      uranus: data[2],
+      uranus: data[6],
       planetImg: "planet-uranus",
       tweenedRotation: 0,
       tweenedRevolution: 0,

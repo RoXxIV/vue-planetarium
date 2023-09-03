@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!--Planets Pictures -->
     <section class="planet-review">
       <div class="planet-img">
         <img
@@ -22,6 +23,7 @@
           alt="Planet Geology"
         />
       </div>
+      <!--Planets Resume -->
       <div class="planet-resume">
         <div class="main-info">
           <h2>
@@ -67,7 +69,6 @@
             </p>
           </span>
         </div>
-
         <ul class="interaction-list">
           <li
             class="init-button"
@@ -95,6 +96,7 @@
         </ul>
       </div>
     </section>
+    <!--Planets Pictures -->
     <section class="data-planet">
       <div>
         <h4>ROTATION TIME</h4>
@@ -211,6 +213,7 @@ export default {
   padding: 50px 250px;
   width: 100%;
   overflow: hidden;
+  /* Planets Pictures */
   .planet-img {
     margin: auto;
     position: relative;
@@ -226,6 +229,7 @@ export default {
     }
   }
 }
+/* Planets Resume */
 .planet-resume {
   width: 350px;
   h2 {
@@ -278,7 +282,7 @@ export default {
     }
   }
 }
-
+/* Planets Data */
 .data-planet {
   display: flex;
   justify-content: space-around;

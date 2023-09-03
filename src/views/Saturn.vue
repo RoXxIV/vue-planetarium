@@ -25,7 +25,7 @@ export default {
   components: { PlanetInfo },
   data() {
     return {
-      saturn: data[2],
+      saturn: data[5],
       planetImg: "planet-saturn",
       tweenedRotation: 0,
       tweenedRevolution: 0,

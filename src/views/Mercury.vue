@@ -25,7 +25,7 @@ export default {
   components: { PlanetInfo },
   data() {
     return {
-      mercury: data[2],
+      mercury: data[0],
       planetImg: "planet-mercury",
       tweenedRotation: 0,
       tweenedRevolution: 0,
