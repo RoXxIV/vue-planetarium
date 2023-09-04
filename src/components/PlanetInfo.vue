@@ -189,15 +189,17 @@ export default {
       this.showGeology = true;
     },
     animeImg() {
-      gsap.fromTo(
-        "#one",
-        {},
-        {
-          scale: 1.1,
-          duration: 1.5,
-          ease: "power4.out",
-        }
-      );
+      if (window.innerWidth > 768) {
+        gsap.fromTo(
+          "#one",
+          {},
+          {
+            scale: 1.1,
+            duration: 1.5,
+            ease: "power4.out",
+          }
+        );
+      }
     },
   },
   mounted() {

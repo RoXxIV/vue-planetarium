@@ -179,16 +179,20 @@ export default {
     };
   },
   methods: {
+    // Toggles the burger menu's open and closed states
     ToggleBurgerMenu() {
       const burger = document.getElementById("btn-burger");
       burger.classList.toggle("opened");
+      // Set the 'aria-expanded' attribute to help with accessibility
       burger.setAttribute("aria-expanded", burger.classList.contains("opened"));
     },
+    // Toggles the visibility of the mobile menu
     toggleMobileMenu() {
       this.showMobileMenu = !this.showMobileMenu;
     },
   },
   watch: {
+    // Watch the state of 'showMobileMenu' to prevent or allow body scrolling
     showMobileMenu(value) {
       document.body.style.overflowY = value ? "hidden" : "auto";
     },
