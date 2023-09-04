@@ -19,7 +19,7 @@
           class="menu cursorPointer"
           @click="
             ToggleBurgerMenu();
-            showMobileMenu = !showMobileMenu;
+            toggleMobileMenu();
           "
           aria-label="Main Menu"
         >
@@ -48,7 +48,7 @@
             "
           >
             <span class="circle"></span
-            ><router-link to="mercury" class="mobile-link">Mercury</router-link>
+            ><router-link to="mercury" class="mobile-link">MERCURY</router-link>
           </li>
           <li
             @click="
@@ -183,6 +183,14 @@ export default {
       const burger = document.getElementById("btn-burger");
       burger.classList.toggle("opened");
       burger.setAttribute("aria-expanded", burger.classList.contains("opened"));
+    },
+    toggleMobileMenu() {
+      this.showMobileMenu = !this.showMobileMenu;
+    },
+  },
+  watch: {
+    showMobileMenu(value) {
+      document.body.style.overflowY = value ? "hidden" : "auto";
     },
   },
 };
